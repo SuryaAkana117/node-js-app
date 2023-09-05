@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-    res.send('<h1>Express Demo App</h1> <h4>Message: Hello Aswini </h4> <p>Version 1.4.3</p>');
+    res.send('<h1>Teacher\'s Day</h1> <h4>Message: Happy Teachers Day </h4> <p>Date: 05-09-2023</p>');
   })
   
   app.get('/products', (req, res) => {
