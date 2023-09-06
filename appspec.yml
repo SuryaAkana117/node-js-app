@@ -5,4 +5,4 @@ phases:
     commands:
       - echo "Deploying Java application to Tomcat..."
       - cp target/my-app.war /opt/tomcat/webapps/
-      - sudo service tomcat8 start
+     

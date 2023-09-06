@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18.x
+    commands:
+      - echo "Installing Node.js dependencies..."
+      - npm install
+
+  build:
+    commands:
+      - echo "Building Node.js application..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Build completed on `date`..."
+
+artifacts:
+  files:
+    - app.js
+    - index.html
+    - package.json
+    - node_modules/*
