@@ -4,4 +4,4 @@ phases:
   build:
     commands:
       - echo "Building Java application..."
-      - mvn clean install
+      - mvn clean package
