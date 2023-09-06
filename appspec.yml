@@ -1,18 +1,8 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /home/ec2-user/express-app
-hooks:
-  ApplicationStop:
-    - location: scripts/application_stop.sh
-      timeout: 300
-      runas: ec2-user
-  BeforeInstall:
-    - location: scripts/before_install.sh
-      timeout: 300
-      runas: ec2-user
-  ApplicationStart:
-    - location: scripts/application_start.sh
-      timeout: 300
-      runas: ec2-user
+version: 0.0.1
+
+phases:
+  deploy:
+    commands:
+      - echo "Deploying Java application to Tomcat..."
+      - cp target/my-app.war /opt/tomcat/webapps/
+      - sudo service tomcat8 start
